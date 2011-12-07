@@ -57,7 +57,6 @@ Enjoy!
 			}
 			var resultado = (nowval+1);
 			$('input[name="'+thisname+'"]').val(resultado);
-			console.log(thisname + " / " + nowval + " / " + resultado);
 			return false;
 		});
 
@@ -69,7 +68,6 @@ Enjoy!
 				resultado = 0;
 			}
 			$('input[name="'+thisname+'"]').val(resultado);
-			console.log(thisname + " / " + nowval + " / " + resultado);
 			return false;
 		});
 	};
