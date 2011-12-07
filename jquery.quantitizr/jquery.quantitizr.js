@@ -52,6 +52,9 @@ Enjoy!
 		$("a.addqnt").live('click', function () {
 			var thisname = $(this).attr('title');
 			var nowval = parseFloat($('input[name="'+thisname+'"]').val());
+			if(nowval==' ' or nowval=='NaN'){
+				nowval = 0;
+			}
 			var resultado = (nowval+1);
 			$('input[name="'+thisname+'"]').val(resultado);
 			console.log(thisname + " / " + nowval + " / " + resultado);
