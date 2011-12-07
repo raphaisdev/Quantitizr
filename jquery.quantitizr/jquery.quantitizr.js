@@ -14,7 +14,7 @@ How to use?________________________________________________________
  - Put this on your html head tag:
 
 <script type="text/javascript" src="js/jquery.quantitizr/jquery.quantitizr.js"></script>
-<link rel="stylesheet" href="js/jquery.quantitizr/jquery.quantitizr.js" type="text/css" />
+<link rel="stylesheet" href="js/jquery.quantitizr/jquery.quantitizr.css" type="text/css" />
 
 
  - Call the function on document ready on bottom of your code, before the body end tag:
@@ -52,7 +52,7 @@ Enjoy!
 		$("a.addqnt").live('click', function () {
 			var thisname = $(this).attr('title');
 			var nowval = parseFloat($('input[name="'+thisname+'"]').val());
-			if(nowval==' ' or nowval=='NaN'){
+			if(nowval==" " || isNaN(nowval) || nowval==""){
 				nowval = 0;
 			}
 			var resultado = (nowval+1);
@@ -63,6 +63,9 @@ Enjoy!
 		$("a.rmqnt").live('click', function () {
 			var thisname = $(this).attr('title');
 			var nowval = parseFloat($('input[name="'+thisname+'"]').val());
+			if(nowval==" " || isNaN(nowval) || nowval==""){
+				nowval = 1;
+			}
 			var resultado = (nowval-1);
 			if(resultado<0){
 				resultado = 0;
