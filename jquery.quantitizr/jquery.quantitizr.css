@@ -1,0 +1,22 @@
+span.bts_qnttzr {
+    display: inline-table;
+    height: 32px;
+    width: 16px;
+}
+span.bts_qnttzr a {
+    background: url("up_down.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 16px;
+    overflow: hidden;
+    text-indent: -9999px !important;
+    width: 16px;
+}
+span.bts_qnttzr a.addqnt {
+    background-position: 0 -16px;
+}
+span.bts_qnttzr a.rmqnt {
+    background-position: 0 -32px;
+}
+span.bts_qnttzr a.rmqnt:hover {
+    background-position: 0 -48px;
+}
